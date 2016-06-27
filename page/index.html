@@ -21,7 +21,6 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/js/notify.js"></script>
-    <script src="/js/main.js"></script>
       <script>
         var socket = io();
         $('form').submit(function(){
@@ -33,7 +32,6 @@
           $('#messages').append($('<li>').text(msg));
           $('#messageContainer').scrollTop($('#messageContainer')[0].scrollHeight)
         });
-
     </script>
   </body>
 </html>
