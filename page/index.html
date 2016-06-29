@@ -14,6 +14,7 @@
     </style>
      <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -34,9 +35,9 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <div style="max-height:400px;min-height:400px;overflow-y: scroll;overflow-x: hidden;" id="messageContainer"><ul id="messages"></ul></div>
+    <div style="max-height:400px;min-height:400px;overflow-y: scroll;overflow-x: hidden;" id="messageContainer"><ul id="messages"></ul></div>    
     <form action="">
-      <input id="m" autocomplete="off" " /><button onclick="showNotification()">Enviar</button>
+      <input id="m" autocomplete="off" " /><button>Enviar</button>
     </form>
     <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
