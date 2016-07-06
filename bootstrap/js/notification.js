@@ -8,7 +8,7 @@ function notifyMe(msg) {
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
     var notification = new Notification(msg);
-    setTimeout(nnotification.close.bind(n), 1000);
+    setTimeout(notification.close.bind(notification), 4000);
   }
 
   // Otherwise, we need to ask the user for permission
@@ -16,8 +16,8 @@ function notifyMe(msg) {
     Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        var notification = new Notification(mag);
-        setTimeout(notification.close.bind(n), 1000);
+        var notification = new Notification(msg);
+        setTimeout(notification.close.bind(notification), 4000);
       }
     });
   }
