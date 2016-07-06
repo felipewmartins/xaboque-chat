@@ -51,8 +51,8 @@
         });
          socket.on('chat message', function(msg){
           $('#messages').append($('<li>').text(msg));
-          notifyMe(msg);
           $('#messageContainer').scrollTop($('#messageContainer')[0].scrollHeight)
+          notifyMe(msg);
         });
     </script>
   </body>
