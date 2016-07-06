@@ -1,7 +1,7 @@
 function notifyMe(msg) {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
-    alert("This browser does not support desktop notification");
+    alert("Seu browser não suporta notificações!");
   }
 
   // Let's check whether notification permissions have already been granted
