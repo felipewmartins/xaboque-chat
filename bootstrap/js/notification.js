@@ -9,6 +9,10 @@ function notifyMe(msg) {
     // If it's okay let's create a notification
     var notification = new Notification(msg);
     setTimeout(notification.close.bind(notification), 4000);
+    notification.onclick = function(event) {
+      event.preventDefault(); // prevent the browser from focusing the Notification's tab
+      window.focus();
+    }
   }
 
   // Otherwise, we need to ask the user for permission
@@ -18,6 +22,9 @@ function notifyMe(msg) {
       if (permission === "granted") {
         var notification = new Notification(msg);
         setTimeout(notification.close.bind(notification), 4000);
+          notification.onclick = function () {
+              window.focus();
+          }
       }
     });
   }
