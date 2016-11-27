@@ -1,3 +1,7 @@
+function inFocus() {
+  let windows_focus = window.document.hasFocus();
+  return windows_focus;
+}
 function notifyMe(msg) {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
@@ -7,11 +11,13 @@ function notifyMe(msg) {
   // Let's check whether notification permissions have already been granted
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
-    var notification = new Notification(msg);
-    setTimeout(notification.close.bind(notification), 4000);
-    notification.onclick = function(event) {
+    if (!inFocus()) {
+      var notification = new Notification(msg);
+      setTimeout(notification.close.bind(notification), 4000);
+      notification.onclick = function(event) {
       event.preventDefault(); // prevent the browser from focusing the Notification's tab
       window.focus();
+      }
     }
   }
 
